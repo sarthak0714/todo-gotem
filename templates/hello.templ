@@ -1,0 +1,14 @@
+package templates
+
+import "github.com/sarthak0714/todo-gotem/templates/layout"
+import "github.com/sarthak0714/todo-gotem/model"
+
+templ Hello(todos []model.Todo){
+    @layout.Layout(){
+     <ul>
+        for _,todo := range todos{
+            <li>{todo.Task}</li>
+        }
+    </ul>
+    }
+   }
